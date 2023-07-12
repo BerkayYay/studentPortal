@@ -1,0 +1,75 @@
+const express = require("express");
+const app = express();
+const port = 3001;
+
+const stdPortal_model = require("./stdPortal/stdPortal_model");
+
+app.use(express.json());
+app.use(function (req, res, next) {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Access-Control-Allow-Headers"
+  );
+  next();
+});
+
+app.get("/getStudents", (req, res) => {
+  stdPortal_model
+    .getStudents()
+    .then((result) => {
+      res.status(200).send(result);
+    })
+    .catch((err) => {
+      res.status(500).send(err);
+    });
+});
+
+app.post("/createstudent", (req, res) => {
+  stdPortal_model
+    .createStudent(req.body)
+    .then((result) => {
+      res.status(200).send(result);
+    })
+    .catch((err) => {
+      res.status(500).send(err);
+    });
+});
+
+app.post("/login", (req, res) => {
+  stdPortal_model
+    .loginUser(req.body)
+    .then((result) => {
+      res.status(200).send(result);
+    })
+    .catch((err) => {
+      res.status(500).send(err);
+    });
+});
+
+app.post("/register", (req, res) => {
+  stdPortal_model
+    .createUsers(req.body)
+    .then((result) => {
+      res.status(200).send(result);
+    })
+    .catch((err) => {
+      res.status(500).send(err);
+    });
+});
+
+app.get("/getUsers", (req, res) => {
+  stdPortal_model
+    .getUsers()
+    .then((result) => {
+      res.status(200).send(result);
+    })
+    .catch((err) => {
+      res.status(500).send(err);
+    });
+});
+
+app.listen(port, () => {
+  console.log(`App running on port ${port}.`);
+});
