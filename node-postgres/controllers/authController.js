@@ -1,6 +1,5 @@
 const pool = require("../db");
 const bcrypt = require("bcrypt");
-const { validateForm } = require("./validateForm");
 
 module.exports.handleLogin = (req, res) => {
   if (req.session.user && req.session.user.username) {
