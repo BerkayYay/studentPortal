@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { VStack, ButtonGroup, Button, Heading } from "@chakra-ui/react";
+import React, { useContext, useState } from "react";
+import { VStack, ButtonGroup, Button, Heading, Text } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 import TextField from "./TextField";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +10,7 @@ import { AccountContext } from "../AccountContext";
 function SignUp() {
   const { setUser } = useContext(AccountContext);
   const navigate = useNavigate();
+  const [error, setError] = useState(null);
   return (
     <Formik
       initialValues={{
@@ -38,12 +39,13 @@ function SignUp() {
             return res.json();
           })
           .then((data) => {
-            if (!data) {
-              return;
-            }
-            console.log(data);
+            if (!data) return;
             setUser({ ...data });
-            navigate("/dashboard");
+            if (data.status) {
+              setError(data.status);
+            } else if (data.loggedIn) {
+              navigate("/dashboard");
+            }
           });
       }}
     >
@@ -57,7 +59,9 @@ function SignUp() {
           spacing="1rem"
         >
           <Heading>Sign Up</Heading>
-
+          <Text as={"p"} color="red.500">
+            {error}
+          </Text>
           <TextField
             label="Username"
             name="username"

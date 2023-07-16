@@ -1,19 +1,12 @@
 const express = require("express");
-const { Server } = require("socket.io");
 const app = express();
 const helmet = require("helmet");
 const cors = require("cors");
 const session = require("express-session");
 const authRouter = require("./routers/authRouter");
+const studentRouter = require("./routers/studentRouter");
 require("dotenv").config();
 const server = require("http").createServer(app);
-
-const io = new Server(server, {
-  cors: {
-    origin: "http://localhost:3000",
-    credentials: "true",
-  },
-});
 
 app.use(helmet()); // for security
 app.use(
@@ -41,8 +34,7 @@ app.use(
 app.use(express.json()); // for parsing application/json
 
 app.use("/auth", authRouter); // use the authRouter for all routes starting with /auth
-
-io.on("connection", (socket) => {});
+app.use("/student", studentRouter); // use the studentRouter for all routes starting with /student
 
 server.listen(3001, () => {
   console.log("listening on *:3001");
