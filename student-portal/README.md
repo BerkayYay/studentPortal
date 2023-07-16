@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+<!DOCTYPE html>
+<html>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<body>
+  <h1>Student Information System Frontend</h1>
 
-## Available Scripts
+  <p>This is the frontend for the Student Information System application.</p>
 
-In the project directory, you can run:
+  <h2>Getting Started</h2>
+  <p>To run the frontend application, follow these steps:</p>
+  <ol>
+    <li>Make sure you have Node.js and npm (Node Package Manager) installed on your machine.</li>
+    <li>Clone this repository to your local machine.</li>
+    <li>Navigate to the project directory in your terminal.</li>
+    <li>Install the required dependencies by running: <code>npm install</code>.</li>
+    <li>Start the development server by running: <code>npm start</code>.</li>
+  </ol>
 
-### `npm start`
+  <h2>Dependencies</h2>
+  <p>The frontend uses the following dependencies:</p>
+  <ul>
+    <li><code>react</code>: JavaScript library for building user interfaces.</li>
+    <li><code>react-router-dom</code>: Library for handling routing in a React application.</li>
+    <li><code>axios</code>: HTTP client for making API requests to the backend.</li>
+  </ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  <h2>Folder Structure</h2>
+  <p>The main components and folders in the frontend project are organized as follows:</p>
+  <ul>
+    <li><code>src/</code>: Main application folder.</li>
+    <li><code>src/components/</code>: Contains individual React components.</li>
+    <li><code>src/App.js</code>: Main application component that handles routing.</li>
+  </ul>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  <h2>Features</h2>
+  <p>The frontend provides the following features:</p>
+  <ul>
+    <li>User-friendly interface for interacting with the Student Information System.</li>
+    <li>Student list page with the ability to view, add, update, and delete students.</li>
+    <li>Student search functionality based on name or ID.</li>
+    <li>User login and signup pages for authentication.</li>
+  </ul>
 
-### `npm test`
+  <h2>Contributing</h2>
+  <p>Contributions to the project are welcome! If you find any issues or have suggestions for improvements, please feel free to submit a pull request.</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  <h2>License</h2>
+  <p>This project is licensed under the MIT License - see the <code>LICENSE.md</code> file for details.</p>
+</body>
+</html>

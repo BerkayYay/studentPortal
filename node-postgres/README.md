@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Student Information System Backend</title>
-</head>
+
 <body>
   <h1>Student Information System Backend</h1>
 
