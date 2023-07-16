@@ -19,24 +19,25 @@
     <li>Start the server by running: <code>npm start</code>.</li>
   </ol>
 
-  <h2>API Endpoints</h2>
+  <h2>Endpoints</h2>
   <p>The following API endpoints are available:</p>
-  <h3>Student Router</h3>
   <ul>
+    <li><code>POST /auth/login</code>: User login endpoint.</li>
+    <li><code>POST /auth/signup</code>: User signup endpoint.</li>
     <li><code>GET /student/getAll</code>: Get all students.</li>
-    <li><code>POST /student/getStudent</code>: Get a specific student.</li>
-    <li><code>POST /student/deleteStudent</code>: Delete a student.</li>
-    <li><code>POST /student/updateStudent</code>: Update an existing student.</li>
+    <li><code>POST /student/getStudent</code>: Get a specific student by ID.</li>
+    <li><code>POST /student/deleteStudent</code>: Delete a student by ID.</li>
+    <li><code>POST /student/updateStudent</code>: Update an existing student by ID.</li>
     <li><code>POST /student/addStudent</code>: Add a new student.</li>
-    <li><code>POST /student/searchStudentWithAll</code>: Search students using various criteria.</li>
+    <li><code>POST /student/searchStudentWithAll</code>: Search students by name or ID using a query parameter.</li>
   </ul>
 
-  <h3>Auth Router</h3>
-  <ul>
-    <li><code>GET /auth/login</code>: Display the login page.</li>
-    <li><code>POST /auth/login</code>: Handle login attempt and authenticate the user.</li>
-    <li><code>POST /auth/signup</code>: Register a new user.</li>
-  </ul>
+  <h2>Database Setup</h2>
+  <p>To set up the PostgreSQL database, follow these steps:</p>
+  <ol>
+    <li>Create a new database named "student_information_system" in PostgreSQL.</li>
+    <li>Run the SQL queries provided in the <code>database.sql</code> file to create the necessary tables and insert sample data.</li>
+  </ol>
 
   <h2>Dependencies</h2>
   <p>The backend uses the following dependencies:</p>

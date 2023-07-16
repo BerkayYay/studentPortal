@@ -11,12 +11,14 @@ CREATE TABLE students (
   enrolled_courses TEXT,
   grades TEXT
 );
+
 INSERT INTO students (name, student_id, enrolled_courses, grades)
 VALUES ('John Doe', '123456', 'Math, Science', 'A, B'),
        ('Jane Smith', '789012', 'English, History', 'B, A'),
        ('Alice Johnson', '345678', 'Physics, Chemistry', 'C, A');
        
-INSERT INTO users (username, pashash) VALUES ($1, $2);
 
-INSERT INTO students (name, student_id, enrolled_courses, grades)
-VALUES ('John Doe', '123456', 'Math, Science', 'A, B');
+INSERT INTO users (username, passhash)
+VALUES ('john', 'password123'),
+       ('jane', 'password456'),
+       ('admin', 'admin123');
